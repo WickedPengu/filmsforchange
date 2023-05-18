@@ -1,7 +1,7 @@
 * {
     /* outline: 2px solid red; */
     /* padding: 0; */
-    
+
 
     margin: 0;
 
@@ -17,21 +17,54 @@ nav {
 
 }
 
-.nav-items ul li {
+nav ul {
     display: flex;
-    list-style: none;
-    justify-content: start;
-    padding: 1rem;
+    flex-direction: row;
+    justify-content: end;
+
+    padding: .5rem;
 }
 
 nav ul li {
-    padding: 0 3rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /* justify-content: end; */
+    padding: .5rem 1rem;
+    margin: 1rem;
+
 }
+
+
+.nav-items li {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-items li:hover {
+    cursor: pointer;
+    transform: translate(0, -2px);
+}
+
+
+
+
+.nav-items li:last-child {
+    background: #d73f09;
+    border-radius: 15px;
+}
+
+.nav-items li:last-child:hover {
+    filter: brightness(80%);
+}
+
+
+
 
 h1 {
     color: white;
     padding: 15px;
-    padding-top: 2.5rem;
+    padding-top: 5rem;
 
     font-weight: 900;
     font-size: 2.75rem;
@@ -72,6 +105,8 @@ header button:active {
     height: 75vh;
 }
 
+
+
 .mid-section ul {
     display: flex;
     flex-direction: column;
@@ -80,11 +115,16 @@ header button:active {
 }
 
 .mid-section li {
-    list-style-type: disc;
 
     padding: 0.5rem 1.5rem;
 }
 
+.list-items {
+
+    list-style: disc;
+
+
+}
 
 
 .mid-section h2 {
@@ -119,6 +159,17 @@ header button:active {
     margin: 1rem
 }
 
+.blob {
+    display: none;
+}
+
+.blob-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .bot-section {
     display: flex;
     flex-direction: column;
@@ -129,7 +180,7 @@ header button:active {
     height: 150vh;
 }
 
-.bot-section h2{
+.bot-section h2 {
     color: white;
 
     font-size: 2.25rem;
@@ -138,7 +189,7 @@ header button:active {
     padding: 1rem 0 3rem 0;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,13 +202,199 @@ header button:active {
     margin: 0.75rem 0;
 }
 
-.card h3{
+.card h3 {
     padding: .5rem;
 }
 
-.card img{
+.card img {
     max-width: 60vw;
     max-height: 18rem;
 
+    overflow-y: hidden;
+
     padding-top: .5rem;
+}
+
+/* .bot-section-wrapper{
+    display: flex;
+    flex-direction: row;
+} */
+
+@media (min-width: 1000px) {
+    h1 {
+        color: white;
+
+        font-weight: 900;
+        font-size: 10rem;
+
+        padding: 4rem 55% 1rem 3rem;
+        /* margin-right: 60%; */
+
+    }
+
+}
+
+@media (min-width: 799px) {
+    /* CSS rules for screens larger than 600px */
+    /* Add your CSS changes here */
+
+    nav {
+        display: block;
+
+    }
+
+    nav ul {
+        margin: 1rem 4rem 0 0;
+    }
+
+    header button {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 1rem 2rem;
+        margin-left: 3rem;
+
+    }
+
+    header button:hover {
+        cursor: pointer;
+        filter: brightness(80%);
+
+    }
+
+    h1 {
+        color: white;
+
+        font-weight: 900;
+        font-size: 4rem;
+
+        padding: 2.5rem 1rem 1rem 3rem;
+        margin-right: 40%;
+
+    }
+
+    .mid-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .mid-wrapper {
+        display: flex;
+    }
+
+    .mid-left-half {
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: start;
+        margin: 0;
+    }
+
+    .mid-right-half {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mid-right-half h2 {
+        font-size: 5rem;
+    }
+
+    .mid-right-half li {
+        font-size: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .blob-mobile {
+        display: none;
+    }
+
+    .blob {
+        display: block;
+        padding-right: 20%;
+    }
+
+    .mid-section button {
+        all: unset;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+
+        background-color: #d73f09;
+        border-radius: 20px;
+
+        width: 10rem;
+        height: 3rem;
+
+        padding: 0.75rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .mid-section button:hover {
+        cursor: pointer;
+        filter: brightness(80%);
+    }
+
+    .bot-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: #d73f09;
+        width: 100vw;
+        height: 65vh;
+    }
+
+    .bot-section h2 {
+        color: white;
+        text-align: center;
+
+        font-size: 2.25rem;
+        font-weight: 900;
+
+        padding: 1rem 0 3rem 0;
+        margin: 100;
+    }
+
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        border-radius: 15px;
+        width: 24vw;
+        height: auto;
+
+        margin: 1rem 3rem;
+    }
+
+    .card h3 {
+        padding: .5rem;
+    }
+
+    .card img {
+        max-width: 80vw;
+        max-height: 22rem;
+
+
+        overflow-y: hidden;
+
+        padding-top: .5rem;
+    }
+
+    .card-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
 }
